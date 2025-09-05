@@ -13,12 +13,9 @@ Este projeto foi desenvolvido em **PHP puro** e deve ser executado em um ambient
 
 ## ▶️ Como Rodar
 1. Certifique-se de que o **Apache** e o **MySQL** estão ativos no XAMPP.  
-2. Copie os arquivos `Cart.php` e `index.php` para a pasta `carrinho/` dentro de `htdocs`.  
+2. Copie os arquivo `index.php` para a pasta `cart/src`, e o arquvivo `Cart.php` para dentro de `cart/src/docs` dentro de `htdocs`.  
 3. Abra o navegador e acesse:  
-http://localhost/carrinho
-
-markdown
-Copiar código
+http://localhost/cart
 4. O arquivo `index.php` executará automaticamente os casos de teste e exibirá os resultados.  
 
 ---
@@ -39,17 +36,14 @@ O sistema oferece as seguintes funcionalidades principais:
 - Não é possível adicionar um produto inexistente no catálogo.  
 - A quantidade deve ser sempre positiva (maior que zero).  
 - Não é permitido adicionar quantidade superior ao estoque disponível.  
-- A remoção só é possível se o item estiver no carrinho.  
 - O estoque é atualizado automaticamente ao adicionar ou remover itens.  
 - O desconto só é aplicado com cupom válido (`DESCONTO10`).  
 
 ---
 
 ## ⚠️ Limitações
-- **Cupom fixo**: Apenas o cupom `DESCONTO10` está disponível (definido no código).  
-- **Sem persistência**: Os dados são armazenados em arrays/sessão, sem uso de banco de dados.  
-- **Tratamento de erros simples**: Mensagens de erro são apenas textuais.  
-- **Eficiência**: Algumas funções utilizam `foreach` em vez de métodos nativos mais performáticos (`unset`, `array_values`).  
+- **Cupom fixo**: Apenas o cupom `DESCONTO10` está disponível (definido no código).   
+- **Tratamento de erros simples**: Mensagens de erro são apenas textuais.   
 
 ---
 
@@ -57,15 +51,15 @@ O sistema oferece as seguintes funcionalidades principais:
 O arquivo `index.php` demonstra os seguintes cenários:
 
 ### Caso 1: Adicionar Produto Válido
-- **Entrada**: produto `id=1`, quantidade `2`.  
+- **Entrada**: produto `id=0`, quantidade `2`.  
 - **Resultado**: Produto adicionado e estoque atualizado.  
 
 ### Caso 2: Adicionar Além do Estoque
-- **Entrada**: produto `id=3`, quantidade `10`.  
+- **Entrada**: produto `id=2`, quantidade `10`.  
 - **Resultado**: Exibe erro **"Estoque insuficiente."**  
 
 ### Caso 3: Remover Produto
-- **Entrada**: produto `id=2`.  
+- **Entrada**: produto `id=1`.  
 - **Resultado**: Produto removido e estoque restaurado.  
 
 ### Caso 4: Aplicação de Desconto
