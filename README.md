@@ -11,15 +11,6 @@ Este projeto foi desenvolvido em **PHP puro** e deve ser executado em um ambient
 
 ---
 
-markdown
-Copiar código
-
-- **src/**: Contém a classe `Cart.php`.  
-- **docs/**: Contém este arquivo de documentação.  
-- **index.php**: Arquivo principal que inicia o sistema e executa os testes.  
-
----
-
 ## ▶️ Como Rodar
 1. Certifique-se de que o **Apache** e o **MySQL** estão ativos no XAMPP.  
 2. Copie os arquivos `Cart.php` e `index.php` para a pasta `carrinho/` dentro de `htdocs`.  
