@@ -13,7 +13,7 @@ Este projeto foi desenvolvido em **PHP puro** e deve ser executado em um ambient
 
 ## ▶️ Como Rodar
 1. Certifique-se de que o **Apache** e o **MySQL** estão ativos no XAMPP.  
-2. Copie os arquivo `index.php` para a pasta `cart/src`, e o arquvivo `Cart.php` para dentro de `cart/src/docs` dentro de `htdocs`.  
+2. Clrie uma pasta `cart` dentro do `htdocs` e clone o repositório para dentro dela.  
 3. Abra o navegador e acesse:  
 http://localhost/cart
 4. O arquivo `index.php` executará automaticamente os casos de teste e exibirá os resultados.  
