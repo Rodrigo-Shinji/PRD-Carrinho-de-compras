@@ -41,10 +41,10 @@ class Cart
             $p = $this->products[$productId];
             $this->items[$productId] = [
                 'id_produto' => $p['id'],
-                'nome'       => $p['nome'],
-                'preco'      => $p['preco'],
+                'nome' => $p['nome'],
+                'preco' => $p['preco'],
                 'quantidade' => $quantity,
-                'subtotal'   => 0.0,
+                'subtotal' => 0.0,
             ];
         }
 
@@ -133,3 +133,4 @@ class Cart
         return ['ok' => true, 'successMessage' => $msg];
     }
 }
+
