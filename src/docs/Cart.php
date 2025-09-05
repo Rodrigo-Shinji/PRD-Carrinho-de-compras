@@ -111,7 +111,7 @@ class Cart
     {
         if (!$this->checkCartItem($id)) return;
             $this->items[$id]['subtotal'] = round(
-            $this->items[$id]['preco'] * $this->items[$id]['quantidade'],2);
+            $this->items[$id]['preco'] * $this->items[$id]['quantidade'], 2);
     }
 
     private function checkCartItem(int $productId): bool
@@ -136,3 +136,4 @@ class Cart
         return ['ok' => true, 'successMessage' => $msg];
     }
 }
+
