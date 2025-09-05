@@ -76,7 +76,12 @@ class Cart
 
     public function listItems(): array
     {
-        return array_values($this->items);
+        $result = [];
+
+        foreach ($this->items as $item) {
+            $result[] = $item;
+        }
+        return $result;
     }
 
     public function total(): float
@@ -105,10 +110,8 @@ class Cart
     private function recalculateItem(int $id): void
     {
         if (!$this->checkCartItem($id)) return;
-        $this->items[$id]['subtotal'] = round(
-            $this->items[$id]['preco'] * $this->items[$id]['quantidade'],
-            2
-        );
+            $this->items[$id]['subtotal'] = round(
+            $this->items[$id]['preco'] * $this->items[$id]['quantidade'],2);
     }
 
     private function checkCartItem(int $productId): bool
@@ -133,4 +136,3 @@ class Cart
         return ['ok' => true, 'successMessage' => $msg];
     }
 }
-
