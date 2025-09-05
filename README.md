@@ -11,16 +11,6 @@ Este projeto foi desenvolvido em **PHP puro** e deve ser executado em um ambient
 
 ---
 
-## 📂 Estrutura de Pastas
-Organize os arquivos da seguinte forma dentro da pasta `htdocs` do XAMPP:
-
-carrinho/
-├── src/
-│ └── Cart.php
-├── docs/
-│ └── README.md
-└── index.php
-
 markdown
 Copiar código
 
