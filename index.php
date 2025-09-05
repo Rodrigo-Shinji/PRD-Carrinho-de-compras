@@ -1,6 +1,6 @@
 <?php
 
-require_once './src/Cart.php';
+require_once './src/docs/Cart.php';
 session_start();
 
 if (!isset($_SESSION['cart'])) {

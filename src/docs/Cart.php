@@ -60,7 +60,14 @@ class Cart
         }
 
         $quantity = $this->items[$productId]['quantidade'];
-        unset($this->items[$productId]);
+
+        $newItems = [];
+        foreach ($this->items as $id => $item) {
+            if ($id !== $productId) {
+                $newItems[$id] = $item;
+            }
+        }
+        $this->items = $newItems;
 
         $this->updateStock($productId, $quantity);
 
